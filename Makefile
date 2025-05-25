@@ -1,7 +1,7 @@
-ITERATION := 2025/05/23
+ITERATION  ?= 2025/05/23
 ASSETS_DIR := assets/${ITERATION}
-FORMATS := pdf png svg
-ASSETS := ${FORMATS:%=${ASSETS_DIR}/resume.%}
+FORMATS    ?= pdf png svg
+ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP ?= rustup
 CARGO  != $(RUSTUP) which cargo
