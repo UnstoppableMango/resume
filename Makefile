@@ -1,4 +1,4 @@
-ITERATION  ?= 2025/05/23
+ITERATION  ?= 2025/05/25
 FORMATS    ?= pdf png svg
 
 DATA_DIR   := qualifications/${ITERATION}
