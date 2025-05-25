@@ -1,0 +1,5 @@
+{
+	"tinymist.fontPaths": [
+		"$PWD/.fontist/fonts"
+	]
+}

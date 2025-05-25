@@ -46,3 +46,6 @@ bin/typst: .versions/typst
 
 .envrc: hack/example.envrc
 	cp $< $@ && chmod a=,u+r $@
+
+.vscode/settings.json: hack/vscode-settings.json
+	envsubst <$< >$@
