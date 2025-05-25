@@ -20,8 +20,10 @@ assets/current: ${ASSETS_DIR}
 ${ASSETS}: resume.typ ${ASSETS_DIR} | $(TYPST)
 	$(TYPST) compile $< $@
 
-bin/typst:
-	$(CARGO) install --root ${CURDIR} --locked typst-cli
+bin/typst: .versions/typst
+	$(CARGO) install typst-cli \
+	--root ${CURDIR} --no-track \
+	--version $(shell cat $<)
 
 .envrc: hack/example.envrc
 	cp $< $@ && chmod a=,u+r $@
