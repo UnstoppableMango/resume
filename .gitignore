@@ -5,3 +5,6 @@ bin/
 *.pdf
 .crates2.json
 .envrc
+.fontist/*
+!.fontist/manifest.yml
+.make/
