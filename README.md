@@ -32,3 +32,14 @@ TL;DR
 #### Useful
 
 - [rbenv](https://github.com/rbenv/rbenv)
+
+### Inputs
+
+Phone and Address are parameterized in the hope that I don't accidentally dox myself.
+
+```shell
+$ make ADDRESS='TestAddress' PHONE='555-555-5555'
+typst compile resume.typ assets/2025/05/23/resume.pdf --input address=TestAddress --input phone=555-555-5555
+typst compile resume.typ assets/2025/05/23/resume.png --input address=TestAddress --input phone=555-555-5555
+typst compile resume.typ assets/2025/05/23/resume.svg --input address=TestAddress --input phone=555-555-5555
+```
