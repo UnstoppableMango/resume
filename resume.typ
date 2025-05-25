@@ -28,7 +28,7 @@
     columns: (1fr, 1fr, 1fr),
     column-gutter: 1pt,
     align(center)[ #phone],
-    align(center)[ #link("mailto:ecr.referee@hotmail.com")],
+    align(center)[ #link("mailto:erik.rasmussen@tuta.io")],
     align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[unstoppablemango]]
   )
 ]
