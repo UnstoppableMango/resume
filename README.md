@@ -9,16 +9,19 @@ Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html).
 <div align="center">
   <p align="center">
     <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.pdf">
-      <img alt="PDF" src="https://img.shields.io/badge/PDF-maroon">
+      <img alt="Download PDF" src="https://img.shields.io/badge/Download-PDF-maroon">
     </a>
     <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.png">
-      <img alt="PNG" src="https://img.shields.io/badge/PNG-darkgreen">
+      <img alt="Download PNG" src="https://img.shields.io/badge/Download-PNG-darkgreen">
     </a>
     <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.svg">
-      <img alt="SVG" src="https://img.shields.io/badge/SVG-darkorange">
+      <img alt="Download SVG" src="https://img.shields.io/badge/Download-SVG-darkorange">
     </a>
   </p>
 
+  <a href="https://fonts.google.com/specimen/Roboto">
+    <img alt="SVG" src="https://img.shields.io/badge/Font-Roboto-green">
+  </a>
   <img alt="SVG" src="./assets/2025/05/23/resume.png">
 </div>
 
