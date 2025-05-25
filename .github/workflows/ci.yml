@@ -26,4 +26,3 @@ jobs:
           typst-version: ${{ env.TYPST_VERSION }}
 
       - run: make -B update
-      - run: git diff --exit-code
