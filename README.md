@@ -26,3 +26,4 @@ Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html).
 
 - `make`: Generate all assets for $FORMATS
 - `make update`: Refresh `./assets` directories
+- `make .envrc`: Create a `.envrc` from [example.envrc](./hack/example.envrc)
