@@ -9,13 +9,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # renovate: datasource=github-tags depName=fontist/fontist
+      FONTIST_VERSION: 1.21.1
+      # renovate: datasource=github-tags depName=typst/typst
+      TYPST_VERSION: 0.13.1
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/cache@v4
+      - uses: fontist/setup-fontist@v2
         with:
-          path: bin
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/.crates.toml') }}
+          fontist-version: ${{ env.FONTIST_VERSION }}
 
-      - run: make update
-      - run: git diff --exit-code
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: ${{ env.TYPST_VERSION }}
+
+      - run: make -B update

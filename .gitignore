@@ -6,3 +6,6 @@ bin/
 !assets/**
 .crates2.json
 .envrc
+.fontist/*
+!.fontist/manifest.yml
+.make/

@@ -8,22 +8,37 @@ Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html).
 
 <div align="center">
   <p align="center">
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.pdf">
-      <img alt="PDF" src="https://img.shields.io/badge/PDF-maroon">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.pdf">
+      <img alt="Download PDF" src="https://img.shields.io/badge/Download-PDF-maroon">
     </a>
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.png">
-      <img alt="PNG" src="https://img.shields.io/badge/PNG-darkgreen">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.png">
+      <img alt="Download PNG" src="https://img.shields.io/badge/Download-PNG-darkgreen">
     </a>
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.svg">
-      <img alt="SVG" src="https://img.shields.io/badge/SVG-darkorange">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.svg">
+      <img alt="Download SVG" src="https://img.shields.io/badge/Download-SVG-darkorange">
     </a>
   </p>
 
-  <img alt="SVG" src="./assets/current/resume.png">
+  <a href="https://fonts.google.com/specimen/Roboto">
+    <img alt="SVG" src="https://img.shields.io/badge/Font-Roboto-green">
+  </a>
+
+  <img alt="SVG" src="./assets/2025/05/23/resume.png">
 </div>
 
 ## Development
 
+TL;DR
+
 - `make`: Generate all assets for $FORMATS
 - `make update`: Refresh `./assets` directories
 - `make .envrc`: Create a `.envrc` from [example.envrc](./hack/example.envrc)
+
+### Pre-requisites
+
+- [rustup](https://rustup.rs/)
+- [fontist](https://github.com/fontist/fontist)
+
+#### Useful
+
+- [rbenv](https://github.com/rbenv/rbenv)
