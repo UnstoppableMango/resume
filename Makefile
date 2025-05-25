@@ -5,6 +5,7 @@ ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP ?= rustup
 CARGO  != $(RUSTUP) which cargo
+GEM    := gem
 TYPST  ?= typst
 
 TYPST_ARGS ?=
@@ -21,6 +22,9 @@ assets/current: ${ASSETS_DIR}
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
 ${ASSETS}: resume.typ ${ASSETS_DIR}
 	$(TYPST) compile $< $@ ${TYPST_ARGS}
+
+bin/fontist:
+	$(GEM) install fontist --bindir ${CURDIR}/bin
 
 bin/typst: .versions/typst
 	$(CARGO) install typst-cli \
