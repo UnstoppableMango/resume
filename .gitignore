@@ -3,4 +3,5 @@ bin/
 !.vscode/extensions.json
 /target
 *.pdf
+!assets/**
 .envrc
