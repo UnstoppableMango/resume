@@ -5,7 +5,7 @@ ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP ?= rustup
 CARGO  != $(RUSTUP) which cargo
-TYPST  ?= bin/typst
+TYPST  ?= typst
 
 build: ${ASSETS}
 watch: resume.typ

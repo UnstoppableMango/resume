@@ -10,19 +10,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # renovate: datasource=gihtub-tags depName=typst/typst
+      # renovate: datasource=github-tags depName=fontist/fontist
+      FONTIST_VERSION: 1.21.1
+      # renovate: datasource=github-tags depName=typst/typst
       TYPST_VERSION: 0.13.1
     steps:
       - uses: actions/checkout@v4
+
+      - uses: fontist/setup-fontist@v2
+        with:
+          fontist-version: ${{ env.FONTIST_VERSION }}
 
       - uses: typst-community/setup-typst@v4
         with:
           typst-version: ${{ env.TYPST_VERSION }}
 
-      - uses: actions/cache@v4
-        with:
-          path: bin/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('.versions/**') }}
-
-      - run: TYPST=typst make -B update
+      - run: fontist install "Roboto"
+      - run: make -B update
       - run: git diff --exit-code
