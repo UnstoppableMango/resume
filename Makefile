@@ -5,7 +5,7 @@ ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP ?= rustup
 CARGO  != $(RUSTUP) which cargo
-TYPST  := bin/typst
+TYPST  ?= bin/typst
 
 build: ${ASSETS}
 watch: resume.typ
@@ -17,7 +17,7 @@ ${ASSETS_DIR}:
 	@mkdir -p $@
 assets/current: ${ASSETS_DIR}
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
-${ASSETS}: resume.typ ${ASSETS_DIR} | $(TYPST)
+${ASSETS}: resume.typ ${ASSETS_DIR}
 	$(TYPST) compile $< $@
 
 bin/typst: .versions/typst

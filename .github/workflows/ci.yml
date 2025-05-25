@@ -21,8 +21,8 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: bin/ .crates2.json
-          key: ${{ runner.os }}-cargo-${{ hashFiles('.crates*') }}
+          path: bin/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('.versions/**') }}
 
-      - run: make -B update
+      - run: TYPST=typst make -B update
       - run: git diff --exit-code
