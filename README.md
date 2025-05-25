@@ -2,9 +2,9 @@
 
 # [Erik Rasmussen's](https://github.com/UnstoppableMango) Resume
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-maroon)](https://github.com/UnstoppableMango/resume/releases/download/latest/resume.pdf)
-[![Download PNG](https://img.shields.io/badge/Download-PNG-darkgreen)](https://github.com/UnstoppableMango/resume/releases/download/latest/resume.png)
-[![Download SVG](https://img.shields.io/badge/Download-SVG-darkorange)](https://github.com/UnstoppableMango/resume/releases/download/latest/resume.svg)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-maroon)](https://github.com/UnstoppableMango/resume/releases/latest/download/resume.pdf)
+[![Download PNG](https://img.shields.io/badge/Download-PNG-darkgreen)](https://github.com/UnstoppableMango/resume/releases/latest/download/resume.png)
+[![Download SVG](https://img.shields.io/badge/Download-SVG-darkorange)](https://github.com/UnstoppableMango/resume/releases/latest/download/resume.svg)
 [![Font Roboto](https://img.shields.io/badge/Font-Roboto-green)](https://fonts.google.com/specimen/Roboto)
 [![Font Roboto Thin](https://img.shields.io/badge/Font-Roboto_Thin-green)](https://fonts.google.com/specimen/Roboto)
 
