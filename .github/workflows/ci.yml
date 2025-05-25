@@ -26,5 +26,5 @@ jobs:
           typst-version: ${{ env.TYPST_VERSION }}
 
       - run: fontist install "Roboto"
-      - run: make -B update
+      - run: make -B update TYPST_ARGS=--font-path ~/.fontist/fonts
       - run: git diff --exit-code

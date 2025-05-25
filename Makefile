@@ -7,6 +7,8 @@ RUSTUP ?= rustup
 CARGO  != $(RUSTUP) which cargo
 TYPST  ?= typst
 
+TYPST_ARGS ?=
+
 build: ${ASSETS}
 watch: resume.typ
 	$(TYPST) watch $<
@@ -18,7 +20,7 @@ ${ASSETS_DIR}:
 assets/current: ${ASSETS_DIR}
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
 ${ASSETS}: resume.typ ${ASSETS_DIR}
-	$(TYPST) compile $< $@
+	$(TYPST) compile $< $@ ${TYPST_ARGS}
 
 bin/typst: .versions/typst
 	$(CARGO) install typst-cli \
