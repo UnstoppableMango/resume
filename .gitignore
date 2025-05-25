@@ -3,6 +3,7 @@ bin/
 !.vscode/extensions.json
 /target
 *.pdf
+!assets/**
 .crates2.json
 .envrc
 .fontist/*
