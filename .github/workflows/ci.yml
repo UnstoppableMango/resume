@@ -20,6 +20,7 @@ jobs:
       - uses: fontist/setup-fontist@v2
         with:
           fontist-version: ${{ env.FONTIST_VERSION }}
+          cache-dependency-path: .fontist/manifest.yml
 
       - uses: typst-community/setup-typst@v4
         with:
