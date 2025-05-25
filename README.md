@@ -8,18 +8,18 @@ Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html).
 
 <div align="center">
   <p align="center">
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.pdf">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.pdf">
       <img alt="PDF" src="https://img.shields.io/badge/PDF-maroon">
     </a>
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.png">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.png">
       <img alt="PNG" src="https://img.shields.io/badge/PNG-darkgreen">
     </a>
-    <a href="https://github.com/UnstoppableMango/resume/releases/latest/download/resume.svg">
+    <a href="https://github.com/UnstoppableMango/resume/releases/download/latest/resume.svg">
       <img alt="SVG" src="https://img.shields.io/badge/SVG-darkorange">
     </a>
   </p>
 
-  <img alt="SVG" src="./assets/current/resume.png">
+  <img alt="SVG" src="./assets/2025/05/23/resume.png">
 </div>
 
 ## Development
