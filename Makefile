@@ -11,7 +11,7 @@ build: ${ASSETS}
 watch: resume.typ
 	$(TYPST) watch $<
 
-update: assets/current
+update: build assets/current
 
 ${ASSETS_DIR}:
 	@mkdir -p $@
