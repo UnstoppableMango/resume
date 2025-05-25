@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: bin
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/.crates.toml') }}
+
+      - run: make update
+      - run: git diff --exit-code

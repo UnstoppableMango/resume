@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - run: |
+          gh release create ${{ github.ref_name }} \
+          --fail-on-no-commits --verify-tag \
+          --draft --generate-notes \
+          --repo ${{ github.repository }} \
+           ${{ github.workspace }}/assets/current/*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
