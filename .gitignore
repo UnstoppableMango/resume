@@ -4,4 +4,5 @@ bin/
 /target
 *.pdf
 !assets/**
+.crates2.json
 .envrc
