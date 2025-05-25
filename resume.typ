@@ -68,10 +68,8 @@ solving and procuring the right tools for the job.
   ]
 )
 
-- Developed a food ordering management solution for store associates to track and prioritize orders submitted via mobile and
-web applications.
-- Built fully automated CI/CD pipelines on Azure Pipelines for applications ranging from console batch applications to container-
-ized Docker web services.
+- Developed a food ordering management solution for store associates to track and prioritize orders submitted via mobile and web applications.
+- Built fully automated CI/CD pipelines on Azure Pipelines for applications ranging from console batch applications to containerized Docker web services.
 - Designed and developed the service architecture for a cloud based enterprise food menu management solution in Azure.
 - Upgraded numerous legacy applications to run more efficiently and effectively on modern technologies such as .NET Core.
 - Worked with 3rd party vendors to design, develop, and deploy a cloud based mobile food ordering platform.
@@ -107,8 +105,7 @@ ized Docker web services.
   ]
 )
 
-- Implemented a customer data management tool for the Customer Relations team built on AngularJS and backed by an ASP.NET
-REST API.
+- Implemented a customer data management tool for the Customer Relations team built on AngularJS and backed by an ASP.NET REST API.
 - Automated processes for updating and managing customer rewards program information.
 - Responded to requests for IT assistance from the Customer Relations team.
 
