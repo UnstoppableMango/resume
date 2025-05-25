@@ -5,6 +5,9 @@
   size: 8pt
 )
 
+#let address = sys.inputs.at("address", default: "42 Wallaby Way Sydney, NSW")
+#let phone = sys.inputs.at("phone", default: "(+1) (555) 555-5555")
+
 #align(center)[
   #text(28pt)[
     #text(weight: "thin")[Erik]
@@ -19,12 +22,12 @@
     )
   ]
 
-  #text(gray, 6pt)[458 NE Delaware Ave, Apt 416, Ankeny, IA 50021]
+  #text(gray, 6pt)[#address]
 
   #grid(
     columns: (1fr, 1fr, 1fr),
     column-gutter: 1pt,
-    align(center)[ (+1) 515-782-2960],
+    align(center)[ #phone],
     align(center)[ #link("mailto:ecr.referee@hotmail.com")],
     align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[unstoppablemango]]
   )
