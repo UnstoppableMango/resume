@@ -55,76 +55,35 @@ solving and procuring the right tools for the job.
 
 = #text(blue)[Wor]k Experience
 
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == Kum & Go
-    Application Developer
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Des Moines, IA]\
-    Jan. 2018 - Present
-  ]
+#let experience(e) = {
+	grid(
+		columns: (1fr, 1fr),
+		align(left)[
+			== #e.employer
+			#e.role
+		],
+		align(right)[
+			#set text(style: "italic")
+			#text(blue)[#e.location]\
+			#e.duration
+		]
+	)
+
+	for accomplishment in e.accomplishments [
+		- #accomplishment
+	]
+}
+
+#let workExperience(e) = {
+	for exp in e {
+
+		experience(exp)
+	}
+}
+
+#workExperience(
+	yaml("qualifications/experience.yml")
 )
-
-- Developed a food ordering management solution for store associates to track and prioritize orders submitted via mobile and web applications.
-- Built fully automated CI/CD pipelines on Azure Pipelines for applications ranging from console batch applications to containerized Docker web services.
-- Designed and developed the service architecture for a cloud based enterprise food menu management solution in Azure.
-- Upgraded numerous legacy applications to run more efficiently and effectively on modern technologies such as .NET Core.
-- Worked with 3rd party vendors to design, develop, and deploy a cloud based mobile food ordering platform.
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == Principal Financial Group
-    Application Developer Intern
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Des Moines, IA]\
-    Jan. 2017 - Aug. 2017
-  ]
-)
-
-- Implemented decision making and process improvements to applications in the underwriting process pipeline.
-- Refactored and re-structured legacy insurance policy applications to improve overall system performance.
-- Introduced new integration testing practices for Java REST APIs using mock REST clients and re-usable Docker test environments.
-- Deployed automated CI/CD pipelines for Java Spring web services on WebSphere using Jenkins.
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == Kum & Go
-    Application Developer Intern
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[West Des Moines, IA]\
-    Jan. 2016 - May 2017, Sep. 2017 - Dec. 2017
-  ]
-)
-
-- Implemented a customer data management tool for the Customer Relations team built on AngularJS and backed by an ASP.NET REST API.
-- Automated processes for updating and managing customer rewards program information.
-- Responded to requests for IT assistance from the Customer Relations team.
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == University of Wisconsin Platteville
-    Peer Tutor
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Platteville, WI]\
-    Sep. 2015 - May 2016
-  ]
-)
-
-- Initiated one-on-one review sessions with students.
-- Guided class activities and assignments.
-- Managed a computer lab to assist with student education.
 
 = #text(blue)[Edu]cation
 
