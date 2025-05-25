@@ -1,6 +1,8 @@
 ITERATION  ?= 2025/05/23
-ASSETS_DIR := assets/${ITERATION}
 FORMATS    ?= pdf png svg
+
+DATA_DIR   := qualifications/${ITERATION}
+ASSETS_DIR := assets/${ITERATION}
 ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP  ?= rustup
@@ -35,10 +37,14 @@ manifest-locations: .fontist/manifest.yml
 .fontist/fonts: .fontist/manifest.yml | .fontist/versions
 	$(FONTIST) manifest-install $<
 
-${ASSETS_DIR}:
+${ASSETS_DIR} ${DATA_DIR}:
 	@mkdir -p $@
+
 assets/current: ${ASSETS_DIR}
+qualifications/current: ${DATA_DIR}
+assets/current qualifications/current:
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
+
 ${ASSETS}: resume.typ ${ASSETS_DIR} | fonts
 	$(TYPST) compile $< $@ ${TYPST_ARGS}
 
