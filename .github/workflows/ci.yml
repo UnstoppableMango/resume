@@ -17,5 +17,5 @@ jobs:
           path: bin
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/.crates.toml') }}
 
-      - run: make update
+      - run: make -B update
       - run: git diff --exit-code
