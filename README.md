@@ -22,11 +22,23 @@ Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html).
   <a href="https://fonts.google.com/specimen/Roboto">
     <img alt="SVG" src="https://img.shields.io/badge/Font-Roboto-green">
   </a>
+
   <img alt="SVG" src="./assets/2025/05/23/resume.png">
 </div>
 
 ## Development
 
+TL;DR
+
 - `make`: Generate all assets for $FORMATS
 - `make update`: Refresh `./assets` directories
 - `make .envrc`: Create a `.envrc` from [example.envrc](./hack/example.envrc)
+
+### Pre-requisites
+
+- [rustup](https://rustup.rs/)
+- [fontist](https://github.com/fontist/fontist)
+
+#### Useful
+
+- [rbenv](https://github.com/rbenv/rbenv)
