@@ -27,7 +27,7 @@ watch: resume.typ
 	$(TYPST) watch $<
 
 fonts: .fontist/fonts
-update: build assets/current
+update: build assets/current qualifications/current
 
 manifest-locations: .fontist/manifest.yml
 	$(FONTIST) manifest-locations $<
