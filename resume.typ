@@ -85,7 +85,7 @@ solving and procuring the right tools for the job.
 }
 
 #workExperience(
-	yaml("qualifications/experience.yml")
+	yaml("qualifications/current/experience.yml")
 )
 
 = #text(blue)[Edu]cation
