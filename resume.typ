@@ -1,4 +1,10 @@
-#set page()
+#set page(
+	header: align(center)[
+		#set text(28pt)
+		#text(weight: "thin")[Erik]
+		#text(weight: "bold")[Rasmussen]
+	]
+)
 #set text(
   font: "Roboto",
   weight: "thin",
@@ -9,54 +15,58 @@
 #let phone = sys.inputs.at("phone", default: "(+1) (555) 555-5555")
 
 #align(center)[
-  #text(28pt)[
-    #text(weight: "thin")[Erik]
-    #text(weight: "bold")[Rasmussen]
-  ]
+  #text(gray)[#address]
 
-  #text(blue, 8pt, weight: "regular")[
-    #grid(
-      columns: (1fr, 1fr),
-      align(center)[Software Engineer],
-      align(center)[Application Developer]
-    )
-  ]
-
-  #text(gray, 6pt)[#address]
+	#set text(5pt)
 
   #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 1pt,
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
     align(center)[ #phone],
-    align(center)[ #link("mailto:erik.rasmussen@tuta.io")],
-    align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[unstoppablemango]]
+    align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
+    align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
+    align(center)[ #link("https://github.com/UnstoppableMango")[github.com/UnstoppableMango]],
+    align(center)[#link("https://unstoppablemango.io")[unstoppablemango.io]],
   )
 ]
 
 = #text(blue)[Sum]mary
 
-Current Application Developer at Kum & Go in Des Moines. 4 years experience specializing in full stack development with a focus on
-backend systems and architecture. Passion programmer, hobby sysadmin, and Linux enthusiast. Interested in complex problem-
-solving and procuring the right tools for the job.
+Open-source enthusiast from Des Moines with a decade of experience developing cloud-native solutions and line-of-business enterprise applications.
+Hobby sysadmin with a passion for functional programming, software architecture, and language design.
 
-= #text(blue)[Ski]lls
+== #text(blue)[Edu]cation
 
 #grid(
-  columns: (1fr, 10pt, 7fr),
-  align(right)[
-    #set text(weight: "bold")
-    DevOps\ Back-end\ Front-end\ Programming
-  ],
-  align(center)[],
+  columns: (1fr, 1fr),
   align(left)[
-    Azure, Azure DevOps, Docker, Jenkins\
-    ASP.NET Core, MVC, gRPC\
-    Angular, Blazor, HTML5, SASS\
-    C\#, Typescript, SQL, Node.js, Java, C++/C
+    #text(weight: "medium")[University of Wisconsin Platteville]\
+    B.S. IN SOFTWARE ENGINEERING
+  ],
+  align(right)[
+    #set text(style: "italic")
+    #text(blue)[Platteville, Wisconsin]\
+    Sep. 2013 - Dec. 2017
   ]
 )
 
-= #text(blue)[Wor]k Experience
+- Dean's Honours List
+
+= #text(blue)[Sta]ck
+
+- #text(weight: "medium")[Languages:] Go, TypeScript, C\#, F\#, Rust, Haskell, C, C++, Java
+- #text(weight: "medium")[Technologies:] Kubernetes, React (Native), Angular, TailwindCSS, Pulumi, Terraform
+- #text(weight: "medium")[Certifications:] Certified Kubernetes Application Developer (CKAD), Certified Kubernetes Administrator (CKA)
+
+= #text(blue)[Pro]jects
+
+- #text(weight: "medium")[unmango/go-make]: Makefile AST and parser in Go.
+- #text(weight: "medium")[advent-of-code]: Advent of Code solutions.
+- #text(weight: "medium")[pulumiverse/pulumi-talos]: Pulumi provider for Talos.
+- #text(weight: "medium")[unmango/cloudflare-operator]: A kubernetes operator for managing Cloudflare resources.
+- #text(weight: "medium")[CliWrap.FSharp]: F\# bindings for CliWrap.
+- #text(weight: "medium")[the-cluster]: Homelab infrastructure using Pulumi.
+
+= #text(blue)[Exp]erience
 
 #let experience(e) = {
 	grid(
@@ -87,20 +97,3 @@ solving and procuring the right tools for the job.
 #workExperience(
 	yaml("qualifications/current/experience.yml")
 )
-
-= #text(blue)[Edu]cation
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == University of Wisconsin Platteville
-    B.S. IN SOFTWARE ENGINEERING
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Platteville, Wisconsin]\
-    Sep. 2013 - Dec. 2017
-  ]
-)
-
-- Dean's Honours List
