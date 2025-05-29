@@ -25,7 +25,6 @@
     align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
     align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
     align(center)[ #link("https://github.com/UnstoppableMango")[github.com/UnstoppableMango]],
-    align(center)[#link("https://unstoppablemango.io")[unstoppablemango.io]],
   )
 ]
 

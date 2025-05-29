@@ -32,7 +32,7 @@ update: build assets/current qualifications/current
 manifest-locations: .fontist/manifest.yml
 	$(FONTIST) manifest-locations $<
 
-.fontist/versions:
+.fontist/system_index.default_family.yml:
 	$(FONTIST) update
 .fontist/fonts: .fontist/manifest.yml | .fontist/versions
 	$(FONTIST) manifest-install $<
