@@ -20,7 +20,7 @@
 	#set text(5pt)
 
   #grid(
-    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+    columns: (1fr, 1fr, 1fr, 1fr),
     align(center)[ #phone],
     align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
     align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
