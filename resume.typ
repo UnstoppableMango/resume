@@ -57,17 +57,17 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 = #text(blue)[Sta]ck
 
 - #text(weight: "medium")[Languages:] Go, TypeScript, C\#, F\#, Rust, Haskell, C, C++, Java
-- #text(weight: "medium")[Technologies:] Kubernetes, React (Native), Angular, TailwindCSS, Pulumi, Terraform
+- #text(weight: "medium")[Technologies:] Kubernetes, Pulumi, React (Native), Angular, Tailwind, Azure, AWS
 - #text(weight: "medium")[Certifications:] Certified Kubernetes Application Developer (CKAD), Certified Kubernetes Administrator (CKA)
 
 = #text(blue)[Per]sonal Projects
 
 - #text(weight: "medium")[unmango/go-make]: Makefile AST and parser in Go.
-- #text(weight: "medium")[advent-of-code]: Advent of Code solutions.
-- #text(weight: "medium")[pulumiverse/pulumi-talos]: Pulumi provider for Talos.
-- #text(weight: "medium")[unmango/cloudflare-operator]: A kubernetes operator for managing Cloudflare resources.
-- #text(weight: "medium")[CliWrap.FSharp]: F\# bindings for CliWrap.
+- #text(weight: "medium")[pulumiverse/pulumi-talos]: A Pulumi provider for Talos.
 - #text(weight: "medium")[the-cluster]: Homelab infrastructure using Pulumi.
+- #text(weight: "medium")[unmango/cloudflare-operator]: A kubernetes operator and ingress controller for Cloudflare resources.
+- #text(weight: "medium")[advent-of-code]: Advent of Code solutions in various languages.
+- #text(weight: "medium")[CliWrap.FSharp]: F\# bindings for CliWrap.
 
 = #text(blue)[Exp]erience
 
