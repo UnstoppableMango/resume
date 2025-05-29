@@ -3,6 +3,10 @@
 		#set text(28pt)
 		#text(weight: "thin")[Erik]
 		#text(weight: "bold")[Rasmussen]
+	],
+	footer: align(right)[
+		#set text(gray, 6pt)
+		View the source code for this resume on GitHub #link("https://github.com/UnstoppableMango/resume")
 	]
 )
 #set text(
@@ -17,7 +21,7 @@
 #align(center)[
   #text(gray)[#address]
 
-	#set text(5pt)
+	#set text(6pt)
 
   #grid(
     columns: (1fr, 1fr, 1fr, 1fr),
