@@ -60,7 +60,7 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 - #text(weight: "medium")[Technologies:] Kubernetes, React (Native), Angular, TailwindCSS, Pulumi, Terraform
 - #text(weight: "medium")[Certifications:] Certified Kubernetes Application Developer (CKAD), Certified Kubernetes Administrator (CKA)
 
-= #text(blue)[Pro]jects
+= #text(blue)[Per]sonal Projects
 
 - #text(weight: "medium")[unmango/go-make]: Makefile AST and parser in Go.
 - #text(weight: "medium")[advent-of-code]: Advent of Code solutions.
