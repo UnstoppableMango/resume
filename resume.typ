@@ -63,7 +63,8 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 = #text(blue)[Per]sonal Projects
 
 - #text(weight: "medium")[unmango/go-make]: Makefile AST and parser in Go.
-- #text(weight: "medium")[pulumiverse/pulumi-talos]: A Pulumi provider for Talos.
+- #text(weight: "medium")[pulumiverse/pulumi-talos]: A Pulumi provider for Talos provisioning.
+- #text(weight: "medium")[unmango/pulumi-baremetal]: A Pulumi provider for baremetal provisioning using a gRPC client server model.
 - #text(weight: "medium")[the-cluster]: Homelab infrastructure using Pulumi.
 - #text(weight: "medium")[unmango/cloudflare-operator]: A kubernetes operator and ingress controller for Cloudflare resources.
 - #text(weight: "medium")[advent-of-code]: Advent of Code solutions in various languages.

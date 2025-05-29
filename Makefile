@@ -34,7 +34,7 @@ manifest-locations: .fontist/manifest.yml
 
 .fontist/system_index.default_family.yml:
 	$(FONTIST) update
-.fontist/fonts: .fontist/manifest.yml | .fontist/versions
+.fontist/fonts: .fontist/manifest.yml | .fontist/system_index.default_family.yml
 	$(FONTIST) manifest-install $<
 
 ${ASSETS_DIR} ${DATA_DIR}:
