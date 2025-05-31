@@ -1,0 +1,14 @@
+- name: unmango/go-make
+  value: Makefile AST and parser in Go.
+- name: pulumiverse/pulumi-talos
+  value: A Pulumi provider for Talos provisioning.
+- name: unmango/pulumi-baremetal
+  value: A Pulumi provider for baremetal provisioning using a gRPC client/server model.
+- name: the-cluster
+  value: Homelab infrastructure using Pulumi.
+- name: unmango/cloudflare-operator
+  value: A kubernetes operator and ingress controller for Cloudflare resources.
+- name: advent-of-code
+  value: Advent of Code solutions in various languages.
+- name: CliWrap.FSharp
+  value: F# bindings for CliWrap.

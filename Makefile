@@ -1,4 +1,4 @@
-ITERATION  ?= 2025/05/23
+ITERATION  ?= 2025/05/25
 FORMATS    ?= pdf png svg
 
 DATA_DIR   := qualifications/${ITERATION}
@@ -14,10 +14,6 @@ TYPST   ?= typst
 export FONTIST_PATH := ${CURDIR}/.fontist
 export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
 
-ifneq (${ADDRESS},)
-TYPST_ARGS += --input address=${ADDRESS}
-endif
-
 ifneq (${PHONE},)
 TYPST_ARGS += --input phone=${PHONE}
 endif
@@ -27,14 +23,14 @@ watch: resume.typ
 	$(TYPST) watch $<
 
 fonts: .fontist/fonts
-update: build assets/current
+update: build assets/current qualifications/current
 
 manifest-locations: .fontist/manifest.yml
 	$(FONTIST) manifest-locations $<
 
-.fontist/versions:
+.fontist/system_index.default_family.yml:
 	$(FONTIST) update
-.fontist/fonts: .fontist/manifest.yml | .fontist/versions
+.fontist/fonts: .fontist/manifest.yml | .fontist/system_index.default_family.yml
 	$(FONTIST) manifest-install $<
 
 ${ASSETS_DIR} ${DATA_DIR}:

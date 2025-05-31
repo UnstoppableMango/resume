@@ -1,62 +1,75 @@
-#set page()
+#set page(
+	header: align(center)[
+		#set text(28pt)
+		#text(weight: "thin")[Erik]
+		#text(weight: "bold")[Rasmussen]
+	],
+	footer: align(right)[
+		#set text(gray, 6pt)
+		View the source code for this resume on #link("https://github.com/UnstoppableMango/resume")[GitHub]
+	]
+)
 #set text(
   font: "Roboto",
   weight: "thin",
   size: 8pt
 )
 
-#let address = sys.inputs.at("address", default: "42 Wallaby Way Sydney, NSW")
+#let list(l) = {
+	for x in l [
+		- #text(weight: "medium")[#x.name]: #x.value
+	]
+}
+
 #let phone = sys.inputs.at("phone", default: "(+1) (555) 555-5555")
 
 #align(center)[
-  #text(28pt)[
-    #text(weight: "thin")[Erik]
-    #text(weight: "bold")[Rasmussen]
-  ]
+	#text(gray)[Software Engineer | Des Moines, IA]
 
-  #text(blue, 8pt, weight: "regular")[
-    #grid(
-      columns: (1fr, 1fr),
-      align(center)[Software Engineer],
-      align(center)[Application Developer]
-    )
-  ]
-
-  #text(gray, 6pt)[#address]
+	#set text(6pt)
 
   #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 1pt,
+    columns: (1fr, 1fr, 1fr, 1fr),
     align(center)[ #phone],
-    align(center)[ #link("mailto:ecr.referee@hotmail.com")],
-    align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[unstoppablemango]]
+    align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
+    align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
+    align(center)[ #link("https://github.com/UnstoppableMango")[github.com/UnstoppableMango]],
   )
 ]
 
 = #text(blue)[Sum]mary
 
-Current Application Developer at Kum & Go in Des Moines. 4 years experience specializing in full stack development with a focus on
-backend systems and architecture. Passion programmer, hobby sysadmin, and Linux enthusiast. Interested in complex problem-
-solving and procuring the right tools for the job.
+Open-source enthusiast from Des Moines with a decade of experience developing cloud-native solutions and line-of-business enterprise applications.
+Hobby sysadmin with a passion for functional programming, software architecture, and language design.
 
-= #text(blue)[Ski]lls
+== #text(blue)[Edu]cation
 
 #grid(
-  columns: (1fr, 10pt, 7fr),
-  align(right)[
-    #set text(weight: "bold")
-    DevOps\ Back-end\ Front-end\ Programming
-  ],
-  align(center)[],
+  columns: (1fr, 1fr),
   align(left)[
-    Azure, Azure DevOps, Docker, Jenkins\
-    ASP.NET Core, MVC, gRPC\
-    Angular, Blazor, HTML5, SASS\
-    C\#, Typescript, SQL, Node.js, Java, C++/C
+    #text(weight: "medium")[University of Wisconsin Platteville]\
+    B.S. IN SOFTWARE ENGINEERING
+  ],
+  align(right)[
+    #set text(style: "italic")
+    #text(blue)[Platteville, Wisconsin]\
+    Sep. 2013 - Dec. 2017
   ]
 )
 
-= #text(blue)[Wor]k Experience
+- Dean's Honours List
+
+= #text(blue)[Sta]ck
+
+#list(yaml("qualifications/current/stack.yml"))
+
+= #text(blue)[Per]sonal Projects
+
+#text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
+
+#list(yaml("qualifications/current/projects.yml"))
+
+= #text(blue)[Exp]erience
 
 #let experience(e) = {
 	grid(
@@ -87,20 +100,3 @@ solving and procuring the right tools for the job.
 #workExperience(
 	yaml("qualifications/current/experience.yml")
 )
-
-= #text(blue)[Edu]cation
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    == University of Wisconsin Platteville
-    B.S. IN SOFTWARE ENGINEERING
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Platteville, Wisconsin]\
-    Sep. 2013 - Dec. 2017
-  ]
-)
-
-- Dean's Honours List
