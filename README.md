@@ -35,11 +35,11 @@ TL;DR
 
 ### Inputs
 
-Phone and Address are parameterized in the hope that I don't accidentally dox myself.
+Phone is parameterized in the hope that I don't accidentally dox myself.
 
 ```shell
-$ make ADDRESS='TestAddress' PHONE='555-555-5555'
-typst compile resume.typ assets/2025/05/23/resume.pdf --input address=TestAddress --input phone=555-555-5555
-typst compile resume.typ assets/2025/05/23/resume.png --input address=TestAddress --input phone=555-555-5555
-typst compile resume.typ assets/2025/05/23/resume.svg --input address=TestAddress --input phone=555-555-5555
+$ make PHONE='555-555-5555'
+typst compile resume.typ assets/2025/05/23/resume.pdf --input phone=555-555-5555
+typst compile resume.typ assets/2025/05/23/resume.png --input phone=555-555-5555
+typst compile resume.typ assets/2025/05/23/resume.svg --input phone=555-555-5555
 ```
