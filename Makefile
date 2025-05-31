@@ -14,10 +14,6 @@ TYPST   ?= typst
 export FONTIST_PATH := ${CURDIR}/.fontist
 export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
 
-ifneq (${ADDRESS},)
-TYPST_ARGS += --input address=${ADDRESS}
-endif
-
 ifneq (${PHONE},)
 TYPST_ARGS += --input phone=${PHONE}
 endif

@@ -6,7 +6,7 @@
 	],
 	footer: align(right)[
 		#set text(gray, 6pt)
-		View the source code for this resume on GitHub #link("https://github.com/UnstoppableMango/resume")
+		View the source code for this resume on #link("https://github.com/UnstoppableMango/resume")[GitHub]
 	]
 )
 #set text(
@@ -15,11 +15,16 @@
   size: 8pt
 )
 
-#let address = sys.inputs.at("address", default: "42 Wallaby Way Sydney, NSW")
+#let list(l) = {
+	for x in l [
+		- #text(weight: "medium")[#x.name]: #x.value
+	]
+}
+
 #let phone = sys.inputs.at("phone", default: "(+1) (555) 555-5555")
 
 #align(center)[
-  #text(gray)[#address]
+	#text(gray)[Software Engineer | Des Moines, IA]
 
 	#set text(6pt)
 
@@ -56,19 +61,13 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 
 = #text(blue)[Sta]ck
 
-- #text(weight: "medium")[Languages:] Go, TypeScript, C\#, F\#, Rust, Haskell, C, C++, Java
-- #text(weight: "medium")[Technologies:] Kubernetes, Pulumi, React (Native), Angular, Tailwind, Azure, AWS
-- #text(weight: "medium")[Certifications:] Certified Kubernetes Application Developer (CKAD), Certified Kubernetes Administrator (CKA)
+#list(yaml("qualifications/current/stack.yml"))
 
 = #text(blue)[Per]sonal Projects
 
-- #text(weight: "medium")[unmango/go-make]: Makefile AST and parser in Go.
-- #text(weight: "medium")[pulumiverse/pulumi-talos]: A Pulumi provider for Talos provisioning.
-- #text(weight: "medium")[unmango/pulumi-baremetal]: A Pulumi provider for baremetal provisioning using a gRPC client server model.
-- #text(weight: "medium")[the-cluster]: Homelab infrastructure using Pulumi.
-- #text(weight: "medium")[unmango/cloudflare-operator]: A kubernetes operator and ingress controller for Cloudflare resources.
-- #text(weight: "medium")[advent-of-code]: Advent of Code solutions in various languages.
-- #text(weight: "medium")[CliWrap.FSharp]: F\# bindings for CliWrap.
+#text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
+
+#list(yaml("qualifications/current/projects.yml"))
 
 = #text(blue)[Exp]erience
 

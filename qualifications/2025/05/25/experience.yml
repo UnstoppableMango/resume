@@ -19,7 +19,7 @@
     - Developed a food ordering management solution to support store associates completing orders submitted via mobile and web applications.
     - Built automated CI/CD pipelines on Azure Pipelines for application deployment.
     - Designed and implemented the service architecture for a cloud based enterprise food menu management solution in Azure.
-    - Upgraded legacy .NET applications to modern technology stacks.
+    - Migrated legacy .NET applications to cloud-native ASP.NET and .NET Core on Azure.
 
 - employer: Principal Financial Group
   location: Des Moines, IA
@@ -38,11 +38,3 @@
   accomplishments:
     - Implemented a customer data management tool for the Customer Relations team built on AngularJS and backed by an ASP.NET REST API.
     - Automated processes for updating and managing customer rewards program information.
-
-- employer: University of Wisconsin Platteville
-  location: Platteville, WI
-  role: Peer Tutor
-  duration: Sep. 2015 - May 2016
-  accomplishments:
-    - Guided class activities and assignments
-    - Managed a computer lab to assist with student education.

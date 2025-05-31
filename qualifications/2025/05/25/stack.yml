@@ -1,0 +1,8 @@
+- name: Languages
+  value: Go, TypeScript, C#, F#, Rust, Haskell, C, C++, Java
+- name: Technologies
+  value: Kubernetes, Pulumi, Terraform, React (Native), Angular, Tailwind, .NET Aspire, Azure, AWS, GNU Make
+- name: Certifications
+  value: Certified Kubernetes Application Developer (CKAD), Certified Kubernetes Administrator (CKA)
+- name: Interests
+  value: DevOps, Linux, compilers and language design, code generation, polyglot applications, event-driven architecture
