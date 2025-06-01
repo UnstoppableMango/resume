@@ -42,7 +42,7 @@ assets/current qualifications/current:
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
 
 ${ASSETS}: resume.typ ${ASSETS_DIR} | fonts
-	$(TYPST) compile $< $@ ${TYPST_ARGS}
+	$(TYPST) compile --ignore-system-fonts $< $@ ${TYPST_ARGS}
 
 bin/fontist:
 	$(GEM) install fontist --bindir ${CURDIR}/bin
