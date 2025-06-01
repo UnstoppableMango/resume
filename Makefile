@@ -15,7 +15,7 @@ export FONTIST_PATH := ${CURDIR}/.fontist
 export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
 
 ifneq (${PHONE},)
-TYPST_ARGS += --input phone=${PHONE}
+TYPST_ARGS += --input phone='${PHONE}'
 endif
 
 build: ${ASSETS}
