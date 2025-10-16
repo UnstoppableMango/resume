@@ -25,10 +25,10 @@ watch: resume.typ
 fonts: .fontist/fonts
 update: build assets/current qualifications/current
 
-manifest-locations: .fontist/manifest.yml
+manifest-locations: .fontist/manifest.yml | $(FONTIST)
 	$(FONTIST) manifest-locations $<
 
-.fontist/system_index.default_family.yml:
+.fontist/system_index.default_family.yml: | $(FONTIST)
 	$(FONTIST) update
 .fontist/fonts: .fontist/manifest.yml | .fontist/system_index.default_family.yml
 	$(FONTIST) manifest-install $<
