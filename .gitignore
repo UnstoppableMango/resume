@@ -9,3 +9,4 @@ bin/
 .fontist/*
 !.fontist/manifest.yml
 .make/
+.direnv/

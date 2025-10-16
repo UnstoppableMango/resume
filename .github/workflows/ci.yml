@@ -17,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: ruby/setup-ruby@v1
+
       - uses: fontist/setup-fontist@v2
         with:
           fontist-version: ${{ env.FONTIST_VERSION }}
