@@ -7,7 +7,7 @@ ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
 RUSTUP  ?= rustup
 CARGO   != $(RUSTUP) which cargo
-FONTIST ?= fontist
+FONTIST ?= bin/fontist
 GEM     ?= gem
 TYPST   ?= typst
 
