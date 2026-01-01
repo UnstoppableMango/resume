@@ -13,7 +13,7 @@ jobs:
       # renovate: datasource=github-tags depName=fontist/fontist
       FONTIST_VERSION: 2.0.4
       # renovate: datasource=github-tags depName=typst/typst
-      TYPST_VERSION: 0.14.0
+      TYPST_VERSION: 0.14.2
     steps:
       - uses: actions/checkout@v6
 
