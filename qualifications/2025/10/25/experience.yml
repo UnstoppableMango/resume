@@ -7,7 +7,7 @@
     - Mentored junior developers and conducted code reviews to maintain code quality and best practices.
     - Actively engaged with both technical and non-technical clients to gather requirements, provide guidance, and ensure successful project delivery.
     - Developed custom Kubernetes operators using Go to automate application-team infrastructure provisioning.
-    - Administered 60+ node Kubernetes clusters spanning from on-premise Nutanix and VMware hardware to AWS virtual machines running BottleRocket.
+    - Administered 60+ node Kubernetes clusters spanning from on-premise Nutanix and VMware hardware to AWS virtual machines running Bottlerocket.
     - Maintained efficient and re-usable CI/CD pipelines for application delivery teams using GitHub Actions Runner Controller.
     - Architected large scale data pipelines in Azure supporting genome comparisons and other agricultural research with Azure Data Factory and Synapse.
     - Migrated legacy Windows line-of-business application workloads to cloud-native Azure solutions.
