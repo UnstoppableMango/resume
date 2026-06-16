@@ -88,17 +88,21 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 
 == #text(blue)[Edu]cation
 
+#let education = yaml("qualifications/current/education.yml").at(0)
+
 #grid(
   columns: (1fr, 1fr),
   align(left)[
-    #text(weight: "medium")[University of Wisconsin Platteville]\
-    B.S. IN SOFTWARE ENGINEERING
+    #text(weight: "medium")[#education.organization]\
+    #education.degree
   ],
   align(right)[
     #set text(style: "italic")
-    #text(blue)[Platteville, Wisconsin]\
-    Sep. 2013 - Dec. 2017
+    #text(blue)[#education.location]\
+    #education.duration
   ]
 )
 
-- Dean's Honours List
+#for accomplishment in education.accomplishments [
+  - #accomplishment
+]
