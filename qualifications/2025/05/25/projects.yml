@@ -1,14 +1,76 @@
 - name: unmango/go-make
-  value: Makefile AST and parser in Go.
+  value: Makefile abstract syntax tree and parser written in Go.
+  skills:
+    - go
+    - make
+    - ast
+    - parser
+    - lexer
 - name: pulumiverse/pulumi-talos
-  value: A Pulumi provider for Talos provisioning.
+  value: A Pulumi provider for Talos cluster node provisioning.
+  skills:
+    - go
+    - pulumi
+    - talos
+    - kubernetes
+    - iac
 - name: unmango/pulumi-baremetal
-  value: A Pulumi provider for baremetal provisioning using a gRPC client/server model.
+  value: A Pulumi provider for baremetal host provisioning using a gRPC client/server model.
+  skills:
+    - go
+    - pulumi
+    - iac
+    - bash
+    - grpc
+    - ssl
+    - coreutils
 - name: the-cluster
-  value: Homelab infrastructure using Pulumi.
+  value: Homelab kubernetes infrastructure built on Pulumi and Flux.
+  skills:
+    - kubernetes
+    - flux
+    - yaml
+    - pulumi
+    - docker
+    - helm
+    - iac
+    - cloudflare
+    - dns
+    - typescript
+    - ceph
+    - bash
 - name: unmango/cloudflare-operator
   value: A kubernetes operator and ingress controller for Cloudflare resources.
+  skills:
+    - go
+    - kubernetes
+    - operator
+    - controller
+    - cloudflare
+    - ingress
 - name: advent-of-code
-  value: Advent of Code solutions in various languages.
+  value: Advent of Code solutions in various languages including Haskell, F# and Rust.
+  skills:
+    - haskell
+    - fsharp
+    - csharp
+    - typescript
+    - rust
+    - ocaml
+    - algorithms
+    - advent-of-code
 - name: CliWrap.FSharp
-  value: F# bindings for CliWrap.
+  value: F# bindings for the C# library CliWrap.
+  skills:
+    - fsharp
+    - cliwrap
+    - csharp
+    - dotnet
+- name: dotfiles
+  value: Personal dotfiles and NixOS configuration.
+  skills:
+    - nix
+    - nixos
+    - home-manager
+    - zsh
+    - neovim

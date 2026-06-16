@@ -1,4 +1,4 @@
-ITERATION  ?= 2025/05/25
+ITERATION  ?= 2025/10/25
 FORMATS    ?= pdf png svg
 
 DATA_DIR   := qualifications/${ITERATION}
@@ -15,7 +15,7 @@ export FONTIST_PATH := ${CURDIR}/.fontist
 export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
 
 ifneq (${PHONE},)
-TYPST_ARGS += --input phone=${PHONE}
+TYPST_ARGS += --input phone='${PHONE}'
 endif
 
 build: ${ASSETS}
