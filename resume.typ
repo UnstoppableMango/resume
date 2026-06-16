@@ -84,9 +84,7 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 
 #text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
 
-#for x in yaml("qualifications/current/projects.yml") [
-	- #text(weight: "medium")[#x.name]: #x.value
-]
+#list(yaml("qualifications/current/projects.yml"))
 
 == #text(blue)[Edu]cation
 
