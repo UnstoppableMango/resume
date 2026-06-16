@@ -28,13 +28,13 @@
 
 	#set text(6pt)
 
-  #grid(
-    columns: (1fr, 1fr, 1fr, 1fr),
-    align(center)[ #phone],
-    align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
-    align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
-    align(center)[ #link("https://github.com/UnstoppableMango")[github.com/UnstoppableMango]],
-  )
+	#grid(
+		columns: (1fr, 1fr, 1fr, 1fr),
+		align(center)[ #phone],
+		align(center)[ #link("mailto:erik.rasmussen@unmango.dev")],
+		align(center)[ #link("https://www.linkedin.com/in/unstoppablemango")[linkedin.com/in/unstoppablemango]],
+		align(center)[ #link("https://github.com/UnstoppableMango")[github.com/UnstoppableMango]],
+	)
 ]
 
 = #text(blue)[Sum]mary
@@ -42,32 +42,9 @@
 Open-source enthusiast from Des Moines with a decade of experience developing cloud-native solutions and line-of-business enterprise applications.
 Hobby sysadmin with a passion for functional programming, software architecture, and language design.
 
-== #text(blue)[Edu]cation
-
-#grid(
-  columns: (1fr, 1fr),
-  align(left)[
-    #text(weight: "medium")[University of Wisconsin Platteville]\
-    B.S. IN SOFTWARE ENGINEERING
-  ],
-  align(right)[
-    #set text(style: "italic")
-    #text(blue)[Platteville, Wisconsin]\
-    Sep. 2013 - Dec. 2017
-  ]
-)
-
-- Dean's Honours List
-
 = #text(blue)[Sta]ck
 
 #list(yaml("qualifications/current/stack.yml"))
-
-= #text(blue)[Per]sonal Projects
-
-#text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
-
-#list(yaml("qualifications/current/projects.yml"))
 
 = #text(blue)[Exp]erience
 
@@ -100,3 +77,32 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 #workExperience(
 	yaml("qualifications/current/experience.yml")
 )
+
+#pagebreak()
+
+= #text(blue)[Sid]e Projects
+
+#text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
+
+#list(yaml("qualifications/current/projects.yml"))
+
+== #text(blue)[Edu]cation
+
+#let education = yaml("qualifications/current/education.yml").at(0)
+
+#grid(
+  columns: (1fr, 1fr),
+  align(left)[
+    #text(weight: "medium")[#education.organization]\
+    #education.degree
+  ],
+  align(right)[
+    #set text(style: "italic")
+    #text(blue)[#education.location]\
+    #education.duration
+  ]
+)
+
+#for accomplishment in education.accomplishments [
+  - #accomplishment
+]

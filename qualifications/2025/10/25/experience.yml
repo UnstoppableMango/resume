@@ -1,0 +1,48 @@
+- employer: Source Allies
+  location: Urbandale, IA
+  role: Team Lead and Principal Consultant
+  duration: Aug. 2020 - Present
+  accomplishments:
+    - Led teams of developers in an Agile environment to deliver high-quality software solutions.
+    - Mentored junior developers and conducted code reviews to maintain code quality and best practices.
+    - Actively engaged with both technical and non-technical clients to gather requirements, provide guidance, and ensure successful project delivery.
+    - Developed custom Kubernetes operators using Go to automate application-team infrastructure provisioning.
+    - Administered 60+ node Kubernetes clusters spanning from on-premise Nutanix and VMware hardware to AWS virtual machines running Bottlerocket.
+    - Maintained efficient and re-usable CI/CD pipelines for application delivery teams using GitHub Actions Runner Controller.
+    - Architected large scale data pipelines in Azure supporting genome comparisons and other agricultural research with Azure Data Factory and Synapse.
+    - Migrated legacy Windows line-of-business application workloads to cloud-native Azure solutions.
+    - Built a rewards platform in Azure with ASP.NET and GraphQL supported by React Native mobile and web applications.
+    - Designed event-driven microservice architectures spanning multiple domains to enable real-time application updates and eventual consistency.
+    - Analyzed iOS and Android application performance and introduced automated benchmarking into the development lifecycle.
+    - Co-operated with design teams to implement user-friendly and accessible web and mobile application interfaces built on design tokens for re-usability.
+
+- employer: Kum & Go
+  location: Des Moines, IA
+  role: Application Developer
+  duration: Jan. 2018 - Aug. 2020
+  accomplishments:
+    - Developed a food ordering management solution to support store associates completing orders submitted via mobile and web applications.
+    - Built automated CI/CD pipelines on Azure Pipelines for application deployment.
+    - Designed and implemented the service architecture for a cloud based enterprise food menu management solution in Azure.
+    - Migrated legacy .NET applications to cloud-native ASP.NET and .NET Core on Azure.
+    - Introduced new standards for automated testing and code quality analysis based on industry best practices.
+    - Collaborated with cross-functional teams to gather requirements and deliver high-quality software solutions.
+
+- employer: Principal Financial Group
+  location: Des Moines, IA
+  role: Application Developer Intern
+  duration: Jun. 2017 - Aug. 2017
+  accomplishments:
+    - Performed application feature development supporting the insurance underwriting process.
+    - Introduced new integration testing practices for Java REST APIs using mock REST clients and re-usable Docker test environments.
+    - Refactored and re-structured legacy insurance policy applications to improve overall system performance.
+    - Deployed automated CI/CD pipelines for Java Spring web services on WebSphere using Jenkins.
+    - Developed testing suites with Gherkin and Cucumber to support behavior-driven development and engage non-technical team members.
+
+- employer: Kum & Go
+  location: West Des Moines, IA
+  role: Application Developer Intern
+  duration: Jan. 2016 - May 2017, Sep. 2017 - Dec. 2017
+  accomplishments:
+    - Implemented a customer data management tool for the Customer Relations team built on AngularJS and backed by an ASP.NET REST API.
+    - Automated processes for updating and managing customer rewards program information.
