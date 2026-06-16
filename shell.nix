@@ -5,7 +5,6 @@ pkgs.mkShellNoCC {
     gnumake
     rustup
     ruby
-		shellcheck
     typst
   ];
 
