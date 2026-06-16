@@ -5,11 +5,12 @@ DATA_DIR   := qualifications/${ITERATION}
 ASSETS_DIR := assets/${ITERATION}
 ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
-RUSTUP  ?= rustup
-CARGO   != $(RUSTUP) which cargo
-FONTIST ?= bin/fontist
-GEM     ?= gem
-TYPST   ?= typst
+RUSTUP          ?= rustup
+CARGO           != $(RUSTUP) which cargo
+FONTIST         ?= bin/fontist
+FONTIST_VERSION ?=
+GEM             ?= gem
+TYPST           ?= typst
 
 export FONTIST_PATH := ${CURDIR}/.fontist
 export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
@@ -48,7 +49,7 @@ ${ASSETS_DIR}/resume.png ${ASSETS_DIR}/resume.svg: resume.typ ${ASSETS_DIR} | fo
 	$(TYPST) compile $< $@ ${TYPST_ARGS} --pages 1
 
 bin/fontist:
-	$(GEM) install fontist --bindir ${CURDIR}/bin
+	$(GEM) install fontist $(if ${FONTIST_VERSION},--version ${FONTIST_VERSION}) --bindir ${CURDIR}/bin
 
 bin/typst: .versions/typst
 	$(CARGO) install typst-cli \
