@@ -41,8 +41,11 @@ qualifications/current: ${DATA_DIR}
 assets/current qualifications/current:
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
 
-${ASSETS}: resume.typ ${ASSETS_DIR} | fonts
+${ASSETS_DIR}/resume.pdf: resume.typ ${ASSETS_DIR} | fonts
 	$(TYPST) compile $< $@ ${TYPST_ARGS}
+
+${ASSETS_DIR}/resume.png ${ASSETS_DIR}/resume.svg: resume.typ ${ASSETS_DIR} | fonts
+	$(TYPST) compile $< $@ ${TYPST_ARGS} --pages 1
 
 bin/fontist:
 	$(GEM) install fontist --bindir ${CURDIR}/bin
