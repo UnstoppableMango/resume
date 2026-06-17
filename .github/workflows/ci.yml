@@ -12,15 +12,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
 
-      - uses: cachix/install-nix-action@v31
+      - uses: cachix/install-nix-action@v31.10.6
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: nix develop --command make -B build
 
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - uses: JamesIves/github-pages-deploy-action@v4.8.0
         if: github.ref == 'refs/heads/main'
         with:
           folder: assets
