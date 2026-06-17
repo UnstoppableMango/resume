@@ -1,12 +1,7 @@
-bin/
 .vscode/*
 !.vscode/extensions.json
-/target
 *.pdf
 !assets/**
-.crates2.json
 .envrc
-.fontist/*
-!.fontist/manifest.yml
-.make/
 .direnv/
+.claude/

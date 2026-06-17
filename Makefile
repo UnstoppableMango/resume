@@ -5,15 +5,7 @@ DATA_DIR   := qualifications/${ITERATION}
 ASSETS_DIR := assets/${ITERATION}
 ASSETS     := ${FORMATS:%=${ASSETS_DIR}/resume.%}
 
-RUSTUP          ?= rustup
-CARGO           != $(RUSTUP) which cargo
-FONTIST         ?= bin/fontist
-FONTIST_VERSION ?=
-GEM             ?= gem
-TYPST           ?= typst
-
-export FONTIST_PATH := ${CURDIR}/.fontist
-export TYPST_FONT_PATHS ?= ${FONTIST_PATH}/fonts
+TYPST ?= typst
 
 ifneq (${PHONE},)
 TYPST_ARGS += --input phone='${PHONE}'
@@ -23,16 +15,7 @@ build: ${ASSETS}
 watch: resume.typ
 	$(TYPST) watch $<
 
-fonts: .fontist/fonts
 update: build assets/current qualifications/current
-
-manifest-locations: .fontist/manifest.yml | $(FONTIST)
-	$(FONTIST) manifest-locations $<
-
-.fontist/system_index.default_family.yml: | $(FONTIST)
-	$(FONTIST) update
-.fontist/fonts: .fontist/manifest.yml | .fontist/system_index.default_family.yml
-	$(FONTIST) manifest-install $<
 
 ${ASSETS_DIR} ${DATA_DIR}:
 	@mkdir -p $@
@@ -42,19 +25,11 @@ qualifications/current: ${DATA_DIR}
 assets/current qualifications/current:
 	@rm -f $@ && ln -rs ${CURDIR}/$< ${CURDIR}/$@
 
-${ASSETS_DIR}/resume.pdf: resume.typ ${ASSETS_DIR} | fonts
+${ASSETS_DIR}/resume.pdf: resume.typ ${ASSETS_DIR}
 	$(TYPST) compile $< $@ ${TYPST_ARGS}
 
-${ASSETS_DIR}/resume.png ${ASSETS_DIR}/resume.svg: resume.typ ${ASSETS_DIR} | fonts
+${ASSETS_DIR}/resume.png ${ASSETS_DIR}/resume.svg: resume.typ ${ASSETS_DIR}
 	$(TYPST) compile $< $@ ${TYPST_ARGS} --pages 1
-
-bin/fontist:
-	$(GEM) install fontist $(if ${FONTIST_VERSION},--version ${FONTIST_VERSION}) --bindir ${CURDIR}/bin
-
-bin/typst: .versions/typst
-	$(CARGO) install typst-cli \
-	--root ${CURDIR} --no-track \
-	--version $(shell cat $<)
 
 .envrc: hack/example.envrc
 	cp $< $@ && chmod a=,u+r $@

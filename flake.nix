@@ -1,15 +1,38 @@
 {
-  description = "A very basic flake";
+  description = "Resume build environment";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    systems.url = "github:nix-systems/default";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.inputs.systems.follows = "systems";
+    };
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs =
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = with inputs; [ treefmt-nix.flakeModule ];
+      systems = import inputs.systems;
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+      perSystem = { pkgs, ... }: {
+        devShells.default = pkgs.mkShellNoCC {
+          packages = with pkgs; [
+            gnumake
+            roboto
+            typst
+          ];
 
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+          TYPST_FONT_PATHS = "${pkgs.roboto}/share/fonts/truetype";
+        };
 
-  };
+        treefmt.programs = {
+          nixfmt.enable = true;
+        };
+      };
+    };
 }
