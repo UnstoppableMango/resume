@@ -4,7 +4,7 @@
 set -euo pipefail
 
 COMMIT=${1:?commit required}
-OUT=$(realpath "${2:-./out}")
+OUT="${2:-./out}"
 WT=$(mktemp -d)
 
 trap "git worktree remove --force '$WT'" EXIT
