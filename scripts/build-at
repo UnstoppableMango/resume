@@ -7,10 +7,13 @@ COMMIT=${1:?commit required}
 OUT="${2:-./out}"
 WT=$(mktemp -d)
 
-trap "git worktree remove --force '$WT'" EXIT
+cleanup() { git worktree remove --force "$WT" || true; }
+trap cleanup EXIT
+
+mkdir -p "$OUT"
+OUT=$(realpath "$OUT")
 
 git worktree add --detach "$WT" "$COMMIT"
-mkdir -p "$OUT"
 
 TYPST_ARGS=()
 [[ -n "${PHONE:-}" ]] && TYPST_ARGS+=(--input "phone=$PHONE")
