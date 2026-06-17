@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Usage: ./scripts/build-at <commit> [outdir]
+# Generates resume outputs for any git commit without disturbing HEAD.
+set -euo pipefail
+
+COMMIT=${1:?commit required}
+OUT=$(realpath "${2:-./out}")
+WT=$(mktemp -d)
+
+trap "git worktree remove --force '$WT'" EXIT
+
+git worktree add --detach "$WT" "$COMMIT"
+mkdir -p "$OUT"
+
+TYPST_ARGS=()
+[[ -n "${PHONE:-}" ]] && TYPST_ARGS+=(--input "phone=$PHONE")
+
+typst compile "$WT/resume.typ" "$OUT/resume.pdf" "${TYPST_ARGS[@]}"
+typst compile "$WT/resume.typ" "$OUT/resume.png" "${TYPST_ARGS[@]}" --pages 1
+typst compile "$WT/resume.typ" "$OUT/resume.svg" "${TYPST_ARGS[@]}" --pages 1
+
+echo "Output: $OUT"

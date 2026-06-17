@@ -44,7 +44,7 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 
 = #text(blue)[Sta]ck
 
-#list(yaml("qualifications/current/stack.yml"))
+#list(yaml("qualifications/stack.yml"))
 
 = #text(blue)[Exp]erience
 
@@ -75,7 +75,7 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 }
 
 #workExperience(
-	yaml("qualifications/current/experience.yml")
+	yaml("qualifications/experience.yml")
 )
 
 #pagebreak()
@@ -84,11 +84,11 @@ Hobby sysadmin with a passion for functional programming, software architecture,
 
 #text(gray, 8pt, style: "italic")[All projects are hosted on GitHub]
 
-#list(yaml("qualifications/current/projects.yml"))
+#list(yaml("qualifications/projects.yml"))
 
 == #text(blue)[Edu]cation
 
-#let education = yaml("qualifications/current/education.yml").at(0)
+#let education = yaml("qualifications/education.yml").at(0)
 
 #grid(
   columns: (1fr, 1fr),

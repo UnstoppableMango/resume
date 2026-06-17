@@ -1,7 +1,7 @@
 .vscode/*
 !.vscode/extensions.json
 *.pdf
-!assets/**
+assets/
 .envrc
 .direnv/
 .claude/

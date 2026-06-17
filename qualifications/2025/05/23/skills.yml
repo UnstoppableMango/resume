@@ -1,8 +1,0 @@
-- name: DevOps
-  value: Azure, Azure DevOps, Docker, Jenkins
-- name: Back-end
-  value: ASP.NET Core, MVC, gRPC
-- name: Front-end
-  value: Angular, Blazor, HTML5, SASS
-- name: Programming
-  value: C#, Typescript, SQL, Node.js, Java, C++/C
