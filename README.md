@@ -13,25 +13,28 @@ Written in [Typst](https://github.com/typst/typst).
 Over-engineered with [Cargo](https://doc.rust-lang.org/cargo/index.html) and [Make](https://www.gnu.org/software/make/).
 
 <div align="center">
-  <img alt="SVG" src="./assets/2025/05/25/resume.png">
+  <img alt="Resume" src="https://raw.githubusercontent.com/UnstoppableMango/resume/gh-pages/resume.png">
 </div>
 
 ## Development
 
 TL;DR
 
-- `make`: Generate all assets for $FORMATS
-- `make update`: Refresh `./assets` directories
+- `make build`: Generate all assets to `./assets/`
+- `nix build`: Build hermetically via Nix (output in `./result/`)
 - `make .envrc`: Create a `.envrc` from [example.envrc](./hack/example.envrc)
 
-### Pre-requisites
+### Point-in-time builds
 
-- [rustup](https://rustup.rs/)
-- [fontist](https://github.com/fontist/fontist)
+Generate outputs for any commit without touching HEAD:
 
-#### Useful
+```shell
+# shell script (requires typst in PATH)
+./scripts/build-at v2025.05.23 ./out
 
-- [rbenv](https://github.com/rbenv/rbenv)
+# Nix (fully hermetic, no local deps needed)
+nix build 'github:UnstoppableMango/resume/v2025.05.23#default'
+```
 
 ### Inputs
 
@@ -39,7 +42,7 @@ Phone is parameterized in the hope that I don't accidentally dox myself.
 
 ```shell
 $ make PHONE='555-555-5555'
-typst compile resume.typ assets/2025/05/23/resume.pdf --input phone=555-555-5555
-typst compile resume.typ assets/2025/05/23/resume.png --input phone=555-555-5555
-typst compile resume.typ assets/2025/05/23/resume.svg --input phone=555-555-5555
+typst compile resume.typ assets/resume.pdf --input phone=555-555-5555
+typst compile resume.typ assets/resume.png --input phone=555-555-5555
+typst compile resume.typ assets/resume.svg --input phone=555-555-5555
 ```
