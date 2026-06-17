@@ -5,3 +5,4 @@ assets/
 .envrc
 .direnv/
 .claude/
+/result*

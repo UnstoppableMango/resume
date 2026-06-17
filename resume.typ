@@ -10,7 +10,7 @@
 	]
 )
 #set text(
-  font: "Roboto",
+  font: ("Roboto", "Symbols Nerd Font"),
   weight: "thin",
   size: 8pt
 )

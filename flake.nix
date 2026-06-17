@@ -21,7 +21,11 @@
       perSystem =
         { pkgs, ... }:
         let
-          fontPaths = "${pkgs.roboto}/share/fonts/truetype";
+          fontPaths = builtins.concatStringsSep ":" [
+            "${pkgs.roboto}/share/fonts/truetype"
+            "${pkgs.font-awesome}/share/fonts/opentype"
+            "${pkgs.nerd-fonts.symbols-only}/share/fonts/truetype"
+          ];
         in
         {
           packages.default = pkgs.stdenv.mkDerivation {
@@ -44,6 +48,8 @@
             packages = with pkgs; [
               gnumake
               roboto
+              font-awesome
+              nerd-fonts.symbols-only
               typst
             ];
 
