@@ -3,9 +3,9 @@
 - name: pulumiverse/pulumi-talos
   value: A Pulumi provider for Talos cluster node provisioning.
 - name: unmango/pulumi-baremetal
-  value: A Pulumi provider for baremetal host provisioning using a gRPC client/server model.
+  value: A Pulumi provider for baremetal host provisioning using a gRPC client/server model. Built to fill a gap in the Pulumi ecosystem — no existing provider handled low-level host bootstrapping before cluster bring-up.
 - name: the-cluster
-  value: Homelab kubernetes infrastructure built on Pulumi and Flux.
+  value: Homelab Kubernetes infrastructure running personal services, built on Pulumi and Flux. Serves as a proving ground for operator patterns and GitOps workflows used in production engagements.
 - name: unmango/cloudflare-operator
   value: A kubernetes operator and ingress controller for Cloudflare resources.
 - name: advent-of-code

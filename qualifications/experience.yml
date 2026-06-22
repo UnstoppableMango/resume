@@ -3,16 +3,17 @@
   role: Team Lead and Principal Consultant
   duration: Aug. 2020 - Present
   accomplishments:
+    - Developed custom Kubernetes operators using Go to automate application-team infrastructure provisioning, eliminating manual cluster onboarding for 5–10 teams.
+    - Administered 60+ node Kubernetes clusters spanning on-premise Nutanix and VMware hardware to AWS Bottlerocket, maintaining 99.9% uptime across 5–10 application teams.
+    - Maintained efficient and re-usable CI/CD pipelines using GitHub Actions Runner Controller, enabling daily deployments for ~5 application teams.
+    - Operated cluster observability stack (Prometheus, Grafana) and on-call alerting via PagerDuty; participated in incident response and postmortems.
+    - Designed event-driven microservice architectures spanning multiple domains to enable real-time application updates and eventual consistency.
+    - Migrated legacy Windows line-of-business application workloads to cloud-native Azure solutions.
+    - Architected large scale data pipelines in Azure supporting genome comparisons and other agricultural research with Azure Data Factory and Synapse.
     - Led teams of developers in an Agile environment to deliver high-quality software solutions.
     - Mentored junior developers and conducted code reviews to maintain code quality and best practices.
     - Actively engaged with both technical and non-technical clients to gather requirements, provide guidance, and ensure successful project delivery.
-    - Developed custom Kubernetes operators using Go to automate application-team infrastructure provisioning.
-    - Administered 60+ node Kubernetes clusters spanning from on-premise Nutanix and VMware hardware to AWS virtual machines running Bottlerocket.
-    - Maintained efficient and re-usable CI/CD pipelines for application delivery teams using GitHub Actions Runner Controller.
-    - Architected large scale data pipelines in Azure supporting genome comparisons and other agricultural research with Azure Data Factory and Synapse.
-    - Migrated legacy Windows line-of-business application workloads to cloud-native Azure solutions.
     - Built a rewards platform in Azure with ASP.NET and GraphQL supported by React Native mobile and web applications.
-    - Designed event-driven microservice architectures spanning multiple domains to enable real-time application updates and eventual consistency.
     - Analyzed iOS and Android application performance and introduced automated benchmarking into the development lifecycle.
     - Co-operated with design teams to implement user-friendly and accessible web and mobile application interfaces built on design tokens for re-usability.
 

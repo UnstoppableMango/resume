@@ -24,7 +24,7 @@
 #let phone = sys.inputs.at("phone", default: "(+1) (555) 555-5555")
 
 #align(center)[
-	#text(gray)[Software Engineer | Des Moines, IA]
+	#text(gray)[Principal Engineer | Des Moines, IA]
 
 	#set text(6pt)
 
@@ -39,8 +39,9 @@
 
 = #text(blue)[Sum]mary
 
-Open-source enthusiast from Des Moines with a decade of experience developing cloud-native solutions and line-of-business enterprise applications.
-Hobby sysadmin with a passion for functional programming, software architecture, and language design.
+Principal engineer with 8+ years building cloud-native platforms on Kubernetes.
+Certified Kubernetes Administrator and Developer with hands-on experience authoring custom operators, Pulumi providers, and self-service CI/CD infrastructure serving multiple application teams.
+Background spanning both application development and platform engineering — I know what developers need from the platforms I build.
 
 = #text(blue)[Sta]ck
 
